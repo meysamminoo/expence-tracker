@@ -1,23 +1,23 @@
 import { useState } from "react";
+import OverViewComponent from "./OverViewComponent";
 import TransActionComponent from "./TransActionComponent";
 
 const ExpenceApp = () => {
   const [expence, setExpence] = useState(0);
   const [income, setIncome] = useState(0);
-  const [transAction, setTransAction] = useState([]);
+  const [transaction, setTransaction] = useState([]);
+
+  const addTransaction = () => {
+    console.log("success");
+  };
 
   return (
     <section className="container">
-      <div className="topSection">
-        <p>Balance - {income - expence}</p>
-        <button>Add</button>
-      </div>
-
-      <div className="resultSection">
-        <p>Expence {expence}</p>
-        <p>Income {income}</p>
-      </div>
-      <TransActionComponent transAction={transAction} />
+      <OverViewComponent expence={expence} income={income} />
+      <TransActionComponent
+        transAction={transaction}
+        addTransaction={addTransaction}
+      />
     </section>
   );
 };

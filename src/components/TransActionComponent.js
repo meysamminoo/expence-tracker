@@ -1,4 +1,4 @@
-const TransActionComponent = ({ transAction }) => {
+const TransActionComponent = ({ transaction }) => {
   return <div>Trans action !</div>;
 };
 
