@@ -20,19 +20,19 @@ const TranseActionForm = ({ addTransaction, setIsShow }) => {
   return (
     <form onSubmit={submitHandler}>
       <input
-        type="number"
-        name="amount"
-        value={formValues.amount}
-        onChange={changeHandler}
-        placeholder="Amount"
-      />
-
-      <input
         type="text"
         name="desc"
         value={formValues.desc}
         onChange={changeHandler}
         placeholder="description"
+      />
+
+      <input
+        type="number"
+        name="amount"
+        value={formValues.amount}
+        onChange={changeHandler}
+        placeholder="Amount"
       />
 
       <div className="radioBox">

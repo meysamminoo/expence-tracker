@@ -103,3 +103,13 @@ input[type="radio"] {
   align-items: center;
   border-right: 5px solid green;
 }
+
+input.search {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  background-color: #efefef;
+  margin: 20px 0;
+}
