@@ -10,7 +10,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   background-color: #fff;
   padding: 20px;
   margin-top: 20px;
@@ -28,4 +28,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.expenceBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 135px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.expenceBox span {
+  font-weight: bold;
+  color: green;
+}
+.expenceBox .textRed {
+  color: red;
 }
