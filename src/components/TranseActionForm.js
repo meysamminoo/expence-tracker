@@ -8,7 +8,7 @@ const TranseActionForm = ({ addTransaction }) => {
   });
 
   const changeHandler = (e) => {
-    setFormValues({ [e.target.name]: e.target.value });
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {

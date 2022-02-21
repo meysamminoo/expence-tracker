@@ -8,7 +8,7 @@ const ExpenceApp = () => {
   const [transaction, setTransaction] = useState([]);
 
   const addTransaction = (formValues) => {
-    console.log(formValues);
+    setTransaction([...transaction, { ...formValues, id: Date.now() }]);
   };
 
   return (
@@ -18,7 +18,7 @@ const ExpenceApp = () => {
         income={income}
         addTransaction={addTransaction}
       />
-      <TransActionComponent transAction={transaction} />
+      <TransActionComponent transaction={transaction} />
     </section>
   );
 };
