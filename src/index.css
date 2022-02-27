@@ -3,6 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+input,
+button {
+  outline: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
 body {
-  font-size: 20px;
+  font-size: 25px;
 }

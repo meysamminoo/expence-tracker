@@ -5,15 +5,19 @@
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
-  font-family: monospace;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.App h2 {
+  font-size: 40px;
+  margin-top: 50px;
 }
 .container {
+  width: 500px;
   display: flex;
   flex-direction: column;
-  width: 350px;
   background-color: #fff;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 30px;
+  margin-top: 30px;
   border-radius: 10px;
 }
 .topSection {
@@ -22,6 +26,44 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: #fac800;
+  color: #333;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #fac800;
+}
+.primary {
+  color: #fff;
+  background-color: #6d28d9;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.primary:hover {
+  background-color: transparent;
+  border: 2px solid #6d28d9;
+  color: #6d28d9;
+}
+.cancel {
+  background-color: transparent;
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  transition: all 0.4s ease;
+}
+.cancel:hover {
+  background-color: #dc2626;
+  color: #fff;
+  border: 2px solid transparent;
 }
 .resultSection {
   display: flex;
@@ -30,53 +72,40 @@
   align-items: center;
 }
 .expenceBox {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 135px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 15px;
+  margin: 10px;
 }
 .expenceBox span {
   font-weight: bold;
   color: green;
+  margin-top: 7px;
 }
 .expenceBox .textRed {
   color: red;
 }
-.btn {
-  outline: none;
-  padding: 5px 10px;
-  background-color: #ede9ef;
-  color: #6d28d9;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #6d28d9;
-}
-.primary {
-  color: #fff;
-  background-color: #6d28d9;
-  border: none;
-  padding: 10px;
-}
-.cancel {
-  background-color: #fff;
-  color: #dc2626;
-  border: 1px solid #dc2626;
-}
+
 form {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
+  min-height: 250px;
   justify-content: space-between;
   margin-bottom: 30px;
 }
 input {
-  border: 1px solid #ccc;
+  border: 2px solid transparent;
+  background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px 12px;
-  outline: none;
+  font-size: 18px;
+}
+input:focus {
+  border: 2px solid #ccc;
 }
 
 .radioBox {
@@ -103,13 +132,41 @@ input[type="radio"] {
   align-items: center;
   border-right: 5px solid green;
 }
-
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
 input.search {
   display: block;
   width: 100%;
+  margin: 20px 0;
+  border: 2px solid transparent;
+  background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px 12px;
+  font-size: 18px;
+}
+input.search:focus {
+  border: 2px solid #ccc;
+}
+
+.reset {
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #333;
+}
+.reset:hover {
+  background-color: #ccc;
+  border: 2px solid transparent;
+}
+.delete {
   border: 1px solid #ccc;
-  background-color: #efefef;
-  margin: 20px 0;
+  padding: 5px;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+.delete:hover {
+  border: 1px solid #dc2626;
+  color: #dc2626;
 }
