@@ -24,7 +24,8 @@ const TransActionComponent = (props) => {
     filteredTrasaction(searchItem);
   }, [props.transaction]);
 
-  if (!props.transaction.length) return <h3>Add some transactions</h3>;
+  if (!props.transaction.length)
+    return <h3 className="title">Add some transactions</h3>;
 
   return (
     <section>
@@ -45,6 +46,9 @@ const TransActionComponent = (props) => {
               >
                 <span>{t.desc}</span>
                 <span>$ {t.amount}</span>
+                <button className="delete" onClick={() => props.onDelete(t.id)}>
+                  Delete
+                </button>
               </div>
             );
           })

@@ -20,6 +20,18 @@ const ExpenceApp = () => {
     }
   };
 
+  const resetHandler = () => {
+    if (transaction.length !== 0) {
+      setTransaction([]);
+    }
+  };
+
+  const deleteTransactionHandler = (id) => {
+    const newTransactions = [...transaction];
+    const deleteTransaction = newTransactions.filter((t) => t.id !== id);
+    setTransaction(deleteTransaction);
+  };
+
   useEffect(() => {
     let exp = 0;
     let inc = 0;
@@ -39,8 +51,13 @@ const ExpenceApp = () => {
         income={income}
         addTransaction={addTransaction}
       />
-      <TransActionComponent transaction={transaction} />
-      <button className="btn">Reset</button>
+      <TransActionComponent
+        transaction={transaction}
+        onDelete={deleteTransactionHandler}
+      />
+      <button className="btn reset" onClick={resetHandler}>
+        Reset All Transaction
+      </button>
     </section>
   );
 };
