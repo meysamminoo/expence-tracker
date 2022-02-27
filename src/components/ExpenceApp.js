@@ -8,7 +8,16 @@ const ExpenceApp = () => {
   const [transaction, setTransaction] = useState([]);
 
   const addTransaction = (formValues) => {
-    setTransaction([...transaction, { ...formValues, id: Date.now() }]);
+    if (formValues.amount === 0 || formValues.amount === "") {
+      setTransaction([...transaction]);
+    } else if (formValues.desc === "") {
+      formValues.type === "expence"
+        ? (formValues.desc = "expence")
+        : (formValues.desc = "income");
+      setTransaction([...transaction, { ...formValues, id: Date.now() }]);
+    } else {
+      setTransaction([...transaction, { ...formValues, id: Date.now() }]);
+    }
   };
 
   useEffect(() => {
@@ -31,6 +40,7 @@ const ExpenceApp = () => {
         addTransaction={addTransaction}
       />
       <TransActionComponent transaction={transaction} />
+      <button className="btn">Reset</button>
     </section>
   );
 };
