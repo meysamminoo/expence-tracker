@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Expence Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Program work: management money and information expense and income.
+Ability to search based on descriptions transactions
 
 ## Available Scripts
 
