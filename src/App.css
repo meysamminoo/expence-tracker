@@ -132,6 +132,15 @@ input[type="radio"] {
   align-items: center;
   border-right: 5px solid green;
 }
+.transaction .desc {
+  flex: 3;
+}
+.transaction span {
+  flex: 2;
+}
+.transaction button {
+  flex: 1;
+}
 .title {
   text-align: center;
   margin-top: 20px;

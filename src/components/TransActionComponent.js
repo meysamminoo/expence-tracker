@@ -44,7 +44,7 @@ const TransActionComponent = (props) => {
                 style={{ borderRight: t.type === "expence" && "5px solid red" }}
                 key={t.id}
               >
-                <span>{t.desc}</span>
+                <span className="desc">{t.desc}</span>
                 <span>$ {t.amount}</span>
                 <button className="delete" onClick={() => props.onDelete(t.id)}>
                   Delete
