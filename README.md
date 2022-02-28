@@ -1,6 +1,6 @@
 # Expence Tracker
 
-Program work: management money and information expense and income.
+Program work: management money and information expense and income.\
 Ability to search based on descriptions transactions
 
 ## Available Scripts
