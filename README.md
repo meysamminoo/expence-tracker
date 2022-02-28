@@ -3,6 +3,15 @@
 Program work: management money and information expense and income.\
 Ability to search based on descriptions transactions
 
+## Screenshot
+
+![](./screenshot.png)
+
+## Links
+
+- Solution URL: [Solution URL](https://github.com/meysamminoo/expence-tracker)
+- Live Site URL: [Live site URL](https://expence-tracker-90ts1w5eg-meysamminoo.vercel.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
