@@ -49,7 +49,6 @@ const TransActionComponent = ({ transaction, onDelete }) => {
     const filtered = transaction.filter((t) =>
       t.desc.toLowerCase().includes(search.toLowerCase())
     );
-    // filterCategory(selectItem);
     setFilterTransaction(filtered);
   };
 

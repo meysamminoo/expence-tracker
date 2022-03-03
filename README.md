@@ -1,7 +1,9 @@
 # Expence Tracker
 
 Program work: management money and information expense and income.\
-Ability to search based on descriptions transactions
+Ability to search based on descriptions transactions.\
+Ability to select categories for each transaction.\
+Ability to filter based on transaction categories.\
 
 ## Screenshot
 
