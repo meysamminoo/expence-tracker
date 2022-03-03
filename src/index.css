@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 input,
-button {
+button,
+select {
   outline: none;
   border: none;
 }

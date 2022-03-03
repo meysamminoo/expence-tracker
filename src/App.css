@@ -97,14 +97,19 @@ form {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-input {
+input,
+select {
   border: 2px solid transparent;
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px 12px;
   font-size: 18px;
 }
-input:focus {
+select {
+  width: 100%;
+}
+input:focus,
+select:focus {
   border: 2px solid #ccc;
 }
 
@@ -120,7 +125,14 @@ input:focus {
 input[type="radio"] {
   margin-left: 10px;
 }
-
+.filter {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.transactionBox {
+  text-align: center;
+}
 .transaction {
   border-radius: 5px;
   background-color: #f4f4f5;
@@ -131,6 +143,7 @@ input[type="radio"] {
   justify-content: space-between;
   align-items: center;
   border-right: 5px solid green;
+  text-align: left;
 }
 .transaction .desc {
   flex: 3;

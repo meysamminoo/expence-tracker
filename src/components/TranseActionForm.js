@@ -4,6 +4,7 @@ const TranseActionForm = ({ addTransaction, setIsShow }) => {
   const [formValues, setFormValues] = useState({
     type: "expence",
     amount: 0,
+    category: "Other",
     desc: "",
   });
 
@@ -20,19 +21,33 @@ const TranseActionForm = ({ addTransaction, setIsShow }) => {
   return (
     <form onSubmit={submitHandler}>
       <input
-        type="text"
-        name="desc"
-        value={formValues.desc}
-        onChange={changeHandler}
-        placeholder="description"
-      />
-
-      <input
         type="number"
         name="amount"
         value={formValues.amount}
         onChange={changeHandler}
         placeholder="Amount"
+      />
+
+      <select
+        name="category"
+        value={formValues.category}
+        onChange={changeHandler}
+        placeholder="category"
+      >
+        <option>Other</option>
+        <option>Income</option>
+        <option>Hire</option>
+        <option>Installment</option>
+        <option>Comestible</option>
+        <option>Garment</option>
+      </select>
+
+      <input
+        type="text"
+        name="desc"
+        value={formValues.desc}
+        onChange={changeHandler}
+        placeholder="description"
       />
 
       <div className="radioBox">

@@ -18,6 +18,7 @@ const ExpenceApp = () => {
     } else {
       setTransaction([...transaction, { ...formValues, id: Date.now() }]);
     }
+    console.log(transaction);
   };
 
   const resetHandler = () => {
