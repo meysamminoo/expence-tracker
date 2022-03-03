@@ -46,6 +46,7 @@ const TransActionComponent = (props) => {
               >
                 <span className="desc">{t.desc}</span>
                 <span>$ {t.amount}</span>
+                <span>{t.category}</span>
                 <button className="delete" onClick={() => props.onDelete(t.id)}>
                   Delete
                 </button>
