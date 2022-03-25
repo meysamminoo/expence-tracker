@@ -18,12 +18,12 @@ const ExpenceApp = () => {
     } else {
       setTransaction([...transaction, { ...formValues, id: Date.now() }]);
     }
-    console.log(transaction);
   };
 
   const resetHandler = () => {
     if (transaction.length !== 0) {
       setTransaction([]);
+      localStorage.removeItem("transaction");
     }
   };
 
@@ -43,6 +43,15 @@ const ExpenceApp = () => {
     });
     setExpence(exp);
     setIncome(inc);
+  }, [transaction]);
+
+  useEffect(() => {
+    const savedTransaction = JSON.parse(localStorage.getItem("transactions"));
+    if (savedTransaction) setTransaction(savedTransaction);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("transactions", JSON.stringify(transaction));
   }, [transaction]);
 
   return (
