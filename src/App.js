@@ -1,4 +1,4 @@
-import ExpenceApp from "./components/ExpenceApp";
+import ExpenceApp from "./components/ExpenceApp/ExpenceApp";
 import "./App.css";
 
 const App = () => {

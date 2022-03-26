@@ -1,0 +1,33 @@
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: #fac800;
+  color: #333;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #fac800;
+}
+
+.reset {
+  margin-top: 30px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #333;
+}
+.reset:hover {
+  background-color: #ccc;
+  border: 2px solid transparent;
+}

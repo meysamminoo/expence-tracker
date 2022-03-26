@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./TransActionComponent.module.css";
 
 const TransActionComponent = ({ transaction, onDelete }) => {
   const [searchItem, setSearchItem] = useState("");
@@ -67,13 +68,13 @@ const TransActionComponent = ({ transaction, onDelete }) => {
   }, [transaction]);
 
   if (!transaction.length)
-    return <h3 className="title">Add some transactions</h3>;
+    return <h3 className={styles.title}>Add some transactions</h3>;
 
   return (
-    <section className="transactionBox">
-      <div className="filter">
+    <section className={styles.transactionBox}>
+      <div className={styles.filter}>
         <input
-          className="search"
+          className={styles.search}
           type="text"
           value={searchItem}
           onChange={changeHandler}
@@ -100,21 +101,24 @@ const TransActionComponent = ({ transaction, onDelete }) => {
         ? filterTransaction.map((t) => {
             return (
               <div
-                className="transaction-inner"
+                className={styles.transactionInner}
                 key={t.id}
                 style={{
                   borderRight: t.type === "expence" && "5px solid red",
                 }}
               >
-                <div className="transaction">
-                  <span className="desc">{t.desc}</span>
+                <div className={styles.transaction}>
+                  <span className={styles.desc}>{t.desc}</span>
                   <span>$ {t.amount}</span>
                   <span>{t.category}</span>
-                  <button className="delete" onClick={() => onDelete(t.id)}>
+                  <button
+                    className={styles.delete}
+                    onClick={() => onDelete(t.id)}
+                  >
                     Delete
                   </button>
                 </div>
-                <span className="date">{t.date}</span>
+                <span className={styles.date}>{t.date}</span>
               </div>
             );
           })
