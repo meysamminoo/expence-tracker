@@ -4,6 +4,9 @@ Program work: management money and information expense and income.\
 Ability to search based on descriptions transactions.\
 Ability to select categories for each transaction.\
 Ability to filter based on transaction categories.\
+Modulate the styles application.\
+Add transaction registration date.\
+Store application data in Local Storage.
 
 ## Screenshot
 
@@ -14,11 +17,6 @@ Ability to filter based on transaction categories.\
 - Solution URL: [Solution URL](https://github.com/meysamminoo/expence-tracker)
 - Live Site URL: [Live site URL](https://expence-tracker-90ts1w5eg-meysamminoo.vercel.app/)
 
-## features
-
-Modulate the styles application.\
-Add transaction registration date.\
-Store application data in Local Storage.\
 
 ## Available Scripts
 
