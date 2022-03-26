@@ -133,17 +133,22 @@ input[type="radio"] {
 .transactionBox {
   text-align: center;
 }
-.transaction {
-  border-radius: 5px;
+.transaction-inner {
+  display: flex;
+  flex-direction: column;
   background-color: #f4f4f5;
-  padding: 10px;
-  font-weight: bold;
+  border-radius: 5px;
   margin-top: 1rem;
+  border-right: 5px solid green;
+  padding: 10px;
+}
+.transaction {
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-right: 5px solid green;
   text-align: left;
+  padding: 0 0 10px;
 }
 .transaction .desc {
   flex: 3;
@@ -170,6 +175,13 @@ input.search {
 }
 input.search:focus {
   border: 2px solid #ccc;
+}
+
+.date {
+  font-size: 12px;
+  border-top: 1px solid rgba(51, 51, 51, 0.103);
+  padding-top: 10px;
+  width: 100%;
 }
 
 .reset {

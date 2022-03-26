@@ -45,6 +45,7 @@ const ExpenceApp = () => {
     setIncome(inc);
   }, [transaction]);
 
+  // todo: connect app with local storage
   useEffect(() => {
     const savedTransaction = JSON.parse(localStorage.getItem("transactions"));
     if (savedTransaction) setTransaction(savedTransaction);

@@ -6,6 +6,7 @@ const TranseActionForm = ({ addTransaction, setIsShow }) => {
     amount: 0,
     category: "Other",
     desc: "",
+    date: new Date().toString(),
   });
 
   const changeHandler = (e) => {

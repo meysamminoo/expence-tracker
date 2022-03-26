@@ -100,16 +100,21 @@ const TransActionComponent = ({ transaction, onDelete }) => {
         ? filterTransaction.map((t) => {
             return (
               <div
-                className="transaction"
-                style={{ borderRight: t.type === "expence" && "5px solid red" }}
+                className="transaction-inner"
                 key={t.id}
+                style={{
+                  borderRight: t.type === "expence" && "5px solid red",
+                }}
               >
-                <span className="desc">{t.desc}</span>
-                <span>$ {t.amount}</span>
-                <span>{t.category}</span>
-                <button className="delete" onClick={() => onDelete(t.id)}>
-                  Delete
-                </button>
+                <div className="transaction">
+                  <span className="desc">{t.desc}</span>
+                  <span>$ {t.amount}</span>
+                  <span>{t.category}</span>
+                  <button className="delete" onClick={() => onDelete(t.id)}>
+                    Delete
+                  </button>
+                </div>
+                <span className="date">{t.date}</span>
               </div>
             );
           })
