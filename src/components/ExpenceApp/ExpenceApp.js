@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import OverViewComponent from "./OverViewComponent";
-import TransActionComponent from "./TransActionComponent";
+import OverViewComponent from "../OverViewComponent/OverViewComponent";
+import TransActionComponent from "../TransActionComponent/TransActionComponent";
+import styles from "./ExpenceApp.module.css";
 
 const ExpenceApp = () => {
   const [expence, setExpence] = useState(0);
@@ -18,12 +19,12 @@ const ExpenceApp = () => {
     } else {
       setTransaction([...transaction, { ...formValues, id: Date.now() }]);
     }
-    console.log(transaction);
   };
 
   const resetHandler = () => {
     if (transaction.length !== 0) {
       setTransaction([]);
+      localStorage.removeItem("transaction");
     }
   };
 
@@ -45,8 +46,18 @@ const ExpenceApp = () => {
     setIncome(inc);
   }, [transaction]);
 
+  // todo: connect app with local storage
+  useEffect(() => {
+    const savedTransaction = JSON.parse(localStorage.getItem("transactions"));
+    if (savedTransaction) setTransaction(savedTransaction);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("transactions", JSON.stringify(transaction));
+  }, [transaction]);
+
   return (
-    <section className="container">
+    <section className={styles.container}>
       <OverViewComponent
         expence={expence}
         income={income}
@@ -56,7 +67,10 @@ const ExpenceApp = () => {
         transaction={transaction}
         onDelete={deleteTransactionHandler}
       />
-      <button className="btn reset" onClick={resetHandler}>
+      <button
+        className={`${styles.btn} ${styles.reset}`}
+        onClick={resetHandler}
+      >
         Reset All Transaction
       </button>
     </section>

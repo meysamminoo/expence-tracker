@@ -1,0 +1,63 @@
+form {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+input,
+select {
+  border: 2px solid transparent;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 18px;
+}
+select {
+  width: 100%;
+}
+input:focus,
+select:focus {
+  border: 2px solid #ccc;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+.radioBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+.radioBox label {
+  margin-left: 3px;
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: #fac800;
+  color: #333;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #fac800;
+}
+
+.primary {
+  color: #fff;
+  background-color: #6d28d9;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.primary:hover {
+  background-color: transparent;
+  border: 2px solid #6d28d9;
+  color: #6d28d9;
+}
