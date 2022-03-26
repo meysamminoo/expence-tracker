@@ -68,7 +68,7 @@ const TransActionComponent = ({ transaction, onDelete }) => {
   }, [transaction]);
 
   if (!transaction.length)
-    return <h3 className={styles.title}>Add some transactions</h3>;
+    return <h3 className={styles.title}>Add Some Transactions</h3>;
 
   return (
     <section className={styles.transactionBox}>
@@ -108,17 +108,19 @@ const TransActionComponent = ({ transaction, onDelete }) => {
                 }}
               >
                 <div className={styles.transaction}>
-                  <span className={styles.desc}>{t.desc}</span>
-                  <span>$ {t.amount}</span>
-                  <span>{t.category}</span>
-                  <button
-                    className={styles.delete}
-                    onClick={() => onDelete(t.id)}
-                  >
-                    Delete
-                  </button>
+                  <div className={styles.data}>
+                    <span className={styles.desc}>{t.desc}</span>
+                    <span>$ {t.amount}</span>
+                    <span>{t.category}</span>
+                  </div>
+                  <span className={styles.date}>{t.date}</span>
                 </div>
-                <span className={styles.date}>{t.date}</span>
+                <button
+                  className={styles.delete}
+                  onClick={() => onDelete(t.id)}
+                >
+                  Delete
+                </button>
               </div>
             );
           })
